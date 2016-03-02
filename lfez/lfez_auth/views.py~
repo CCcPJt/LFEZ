@@ -1,0 +1,9 @@
+
+
+class UserControl(View):
+	def post(self, request, *args, **kwargs):
+		slug = self.kwargs.get('slug')
+
+        if slug == "login":
+            return self.login(request)
+        elif slug == "logout":
